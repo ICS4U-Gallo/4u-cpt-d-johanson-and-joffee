@@ -1,0 +1,17 @@
+@(courseForm : Form[Course])
+@import helper._
+
+<html>
+<head>
+    <title>Add Course</title>
+</head>
+<body>
+<h1>Add Course</h1>
+@helper.form(action = routes.CourseController.save()){
+@helper.inputText(courseForm("id"))
+@helper.inputText(courseForm("course"))
+
+<input type="submit" value="Add Course">
+}
+</body>
+</html>

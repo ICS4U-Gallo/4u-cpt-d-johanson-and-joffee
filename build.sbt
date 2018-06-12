@@ -1,4 +1,4 @@
-name := """PlayTemplate"""
+name := """Courses"""
 organization := "ca.ycdsb"
 
 version := "1.0-SNAPSHOT"

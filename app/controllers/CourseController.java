@@ -2,6 +2,7 @@ package controllers;
 
 import play.mvc.*;
 import models.Course;
+import models.Marks;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -30,6 +31,14 @@ public class CourseController extends Controller {
         /*Form<Book> bookForm = formFactory.form(Book.class).bindFromRequest();
         Book book = bookForm.get();
         Book.add(book);*/
+        return redirect(routes.HomeController.index());
+    }
+    public Result addMarks() {
+        Form<Marks> marksForm = formFactory.form(Marks.class);
+        return ok(views.html.marksInput.render(marksForm));
+    }
+    public Result saveMarks(){
+        Form<Marks> marksForm = formFactory.form(Marks.class).bindFromRequest();
         return redirect(routes.HomeController.index());
     }
 

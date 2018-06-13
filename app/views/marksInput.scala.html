@@ -1,0 +1,18 @@
+@(marksForm : Form[Marks])
+@import helper._
+
+<html>
+<head>
+    <title>Marks Input</title>
+</head>
+<body>
+<h1>Input Marks</h1>
+@helper.form(action = routes.CourseController.saveMarks()){
+@helper.inputText(marksForm("Type"))
+@helper.inputText(marksForm("Mark"))
+@helper.inputText(marksForm("Weight"))
+
+<input type="submit" value="Add Marks">
+}
+</body>
+</html>

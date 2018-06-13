@@ -6,6 +6,8 @@
 GET     /                           controllers.HomeController.index
 GET     /course/add                 controllers.CourseController.add
 POST    /course/add                 controllers.CourseController.save
+GET     /marks/input                controllers.CourseController.addMarks
+POST    /marks/input                controllers.CourseController.saveMarks
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

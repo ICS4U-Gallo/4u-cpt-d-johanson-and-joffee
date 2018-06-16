@@ -1,4 +1,4 @@
-@(marksFrom : Form[Marks])
+@(currentMark : Double, goalMark : Double, examMark : Double, neededMark : Double)
 @import helper._
 
 <html>
@@ -7,6 +7,9 @@
 </head>
 <body>
 <h1>This is what you need to get on final!!</h1>
-
+@currentMark
+@goalMark
+@examMark
+@neededMark
 </body>
 </html>

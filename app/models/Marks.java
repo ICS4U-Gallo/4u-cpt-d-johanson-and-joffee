@@ -41,6 +41,6 @@ public class Marks {
     }
 
     public Double calculateNeededMark() {
-        return Math.round(((goalMark - currentMark) / (examWorth / 100)) * 100) / 100.0;
+        return Math.round(((goalMark - (currentMark * ((100 - examWorth) / 100))) / (examWorth / 100)) * 100) / 100.0;
     }
 }

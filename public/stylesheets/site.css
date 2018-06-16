@@ -4,4 +4,6 @@
 
         .big-text {
             font-size: 60px;
+            border: 10px solid #ffffff;
+            margin: 50px;
         }

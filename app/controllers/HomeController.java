@@ -4,6 +4,9 @@ import models.Marks;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.*;
+//mport play.http.request;
+//import play.api.*;
+import play.api.mvc.Request;
 
 import javax.inject.Inject;
 
@@ -27,7 +30,8 @@ public class HomeController extends Controller {
         return ok(views.html.index.render(marksForm));
     }
     public Result calculation() {
-        Form<Marks> marksForm = formFactory.form(Marks.class);
-        return ok(views.html.calculation.render(marksForm));
+        Form<Marks> marksForm = formFactory.form(Marks.class).bindFromRequest();
+        Marks mark = marksForm.get();
+        return ok(views.html.calculation.render(mark.currentMark, mark.goalMark, mark.examWorth, mark.calculateNeededMark()));
     }
 }

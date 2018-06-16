@@ -3,7 +3,7 @@ package models;
 public class Marks {
 
     public Double currentMark;
-    public Double examMark;
+    public Double goalMark;
     public Double examWorth;
 
     public Marks(){
@@ -11,9 +11,9 @@ public class Marks {
     }
 
 
-    public Marks(double currentMark, double examMark, double examWorth){
+    public Marks(double currentMark, double goalMark, double examWorth){
         this.currentMark = currentMark;
-        this.examMark = examMark;
+        this.goalMark = goalMark;
         this.examWorth = examWorth;
     }
 

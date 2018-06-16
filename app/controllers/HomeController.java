@@ -26,5 +26,8 @@ public class HomeController extends Controller {
         Form<Marks> marksForm = formFactory.form(Marks.class);
         return ok(views.html.index.render(marksForm));
     }
-
+    public Result calculation() {
+        Form<Marks> marksForm = formFactory.form(Marks.class);
+        return ok(views.html.calculation.render(marksForm));
+    }
 }

@@ -7,13 +7,18 @@
   </head>
   <body>
     <h1>Final Grade Calculator</h1>
-    @helper.form(action = routes.HomeController.index()){
-      @helper.inputText(marksFrom("Current Grade"))
-      @helper.inputText(marksFrom("Exam Mark"))
-      @helper.inputText(marksFrom("Exam Mark Worth"))
 
+    <form method="GET" action="/">
+      <label for="currentMark" >Your current grade is</label><br/>
+      <input id="currentMark" name="currentMark" placeholder="(e.g. 90.2)">%<br/>
+      <br/>
+      <label for="goalMark" >You want to get at least</label><br/>
+      <input id="goalMark" name="goalMark" placeholder="(e.g. 88)">% in the class<br/>
+      <br/>
+      <label for="examWorth" >Your final is worth</label><br/>
+      <input id="examWorth" name="examWorth" placeholder="(e.g. 30)">% of your grade<br/>
+      <br/>
       <input type="submit" value="Calculate Mark">
-
-    }
+    </form>
   </body>
 </html>

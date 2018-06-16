@@ -1,6 +1,19 @@
-@()
+@(marksFrom : Form[Marks])
+@import helper._
 
-@main("Marks Calculator") {
-  <h1>Marks Calculator</h1>
-<a href="/course/add">Add new course</a>
-}
+<html>
+  <head>
+    <title>Final Grade Calculator</title>
+  </head>
+  <body>
+    <h1>Final Grade Calculator</h1>
+    @helper.form(action = routes.HomeController.index()){
+      @helper.inputText(marksFrom("Current Grade"))
+      @helper.inputText(marksFrom("Exam Mark"))
+      @helper.inputText(marksFrom("Exam Mark Worth"))
+
+      <input type="submit" value="Calculate Mark">
+
+    }
+  </body>
+</html>

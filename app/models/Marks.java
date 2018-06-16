@@ -1,31 +1,20 @@
 package models;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Marks {
-    public String type;
-    public Integer marks;
-    public Integer weight;
+
+    public Double currentMark;
+    public Double examMark;
+    public Double examWorth;
 
     public Marks(){
 
     }
 
-    public Marks(String type, Integer mark, Integer weight){
-        this.type = type;
-        this.marks = marks;
-        this.weight = weight;
+
+    public Marks(double currentMark, double examMark, double examWorth){
+        this.currentMark = currentMark;
+        this.examMark = examMark;
+        this.examWorth = examWorth;
     }
 
-    public static Set<Marks> allMarks(){
-        return null;
-    }
-    public static void addMarks(Marks marks){
-        /*books.add(book);*/
-    }
-    public static boolean remove(Marks marks){
-        /*return books.remove(book);*/
-        return true;
-    }
 }

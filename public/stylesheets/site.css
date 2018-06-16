@@ -8,6 +8,9 @@
             margin: 50px;
         }
 
+        .regular-text {
+            font-size: 15px;
+        }
         .white-text {
             color:white;
         }
